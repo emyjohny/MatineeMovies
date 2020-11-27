@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase:{
+    "apiKey": "AIzaSyBqgJZq27VeuzsVDMbGWyJfLHWlrhEJ3rI",
+    "authDomain": "matinee-media-suite.firebaseapp.com",
+    "databaseURL": "https://matinee-media-suite.firebaseio.com",
+    "projectId": "matinee-media-suite",
+    "storageBucket": "matinee-media-suite.appspot.com",
+    "messagingSenderId": "443808971835",
+    "appId": "1:443808971835:web:3b9472b661e0b0e9eff01e",
+    "measurementId": "G-Z6S8FW9GZ9"
+  }
 };
 
 /*
