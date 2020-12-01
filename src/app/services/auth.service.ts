@@ -84,7 +84,10 @@ export class AuthService {
   GoogleAuth() {
     return this.AuthLogin(new auth.auth.GoogleAuthProvider());
   }
-
+  FacebookAuth() {
+    return this.AuthLogin(new auth.auth.FacebookAuthProvider());
+  }
+  
   // Auth logic to run auth providers
   AuthLogin(provider) {
     return this.afAuth.signInWithPopup(provider)
@@ -100,7 +103,7 @@ export class AuthService {
   signOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigateByUrl('');
     })
   }
 
