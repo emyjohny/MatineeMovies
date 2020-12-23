@@ -49,6 +49,7 @@ export class AuthService {
     this.afAuth.signInWithEmailAndPassword(email, password)
     .then(userLogin => {
      userLogin.user.getIdToken().then(tokenValue => {
+      console.log(tokenValue)
       localStorage.setItem('token', JSON.stringify(tokenValue));
      }).catch(err => {
        window.alert(err)
