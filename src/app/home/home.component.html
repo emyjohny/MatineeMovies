@@ -1,5 +1,8 @@
 <!-- <div id="home" *ngIf="!dataservice.toggle"> -->
-    <div id="home" >
+  <app-video [id]="id" [videoArray]="videoPass" *ngIf="dataservice.toggle" ></app-video>
+
+<div id="home" *ngIf="!dataservice.toggle">
+   
     <div class="banner carousel">
       <!-- <div class="container-fluid"> -->   
       <ngb-carousel class="no-indicators" *ngIf="slide">    

@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     .subscribe((resp:any)=>{
       
       for(var i=0; i< resp.length; i++) {
-        this.slide.push(resp[i].imageS3Keys.landscape)
+        this.slide.push(resp[i].imageUrls['landscape'])
         console.log(this.slide)
       }
     })
@@ -37,5 +37,20 @@ this.allCategories=resp;
 // console.log(this.allCategories);  
     })
   }
+
+  videoPass;
+  getId(videoId, catName){   
+       this.id =videoId;
+       videoId="";
+       this.dataservice.toggle=!this.dataservice.toggle;
+        for(var i = 0; i< this.allCategories.length; i++) {
+          if(this.allCategories[i].category == catName) {
+            this.videoPass = this.allCategories[i].items;        
+              break;
+      } 
+
+    }
+  }
+
 
 }
